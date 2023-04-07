@@ -41,16 +41,16 @@ RSpec.describe User, type: :model do
     expect(subject).to_not be_valid
   end
   describe '#newest_posts' do
-  it 'should return the last three posts' do
-    second_post = Post.create(author: subject, title: 'Second seed post', text: 'Lorem Ipsum is simply dummy text.',
-                              comments_counter: 2, likes_counter: 2)
-    third_post = Post.create(author: subject, title: 'Third seed post', text: 'Lorem Ipsum is simply dummy text.',
-                             comments_counter: 2, likes_counter: 2)
-    fourth_post = Post.create(author: subject, title: 'Fourth seed post', text: 'Lorem Ipsum is simply dummy text.',
-                              comments_counter: 2, likes_counter: 2)
-    last_posts = [fourth_post, third_post, second_post]
+    it 'should return the last three posts' do
+      second_post = Post.create(author: subject, title: 'Second seed post', text: 'Lorem Ipsum is simply dummy text.',
+                                comments_counter: 2, likes_counter: 2)
+      third_post = Post.create(author: subject, title: 'Third seed post', text: 'Lorem Ipsum is simply dummy text.',
+                               comments_counter: 2, likes_counter: 2)
+      fourth_post = Post.create(author: subject, title: 'Fourth seed post', text: 'Lorem Ipsum is simply dummy text.',
+                                comments_counter: 2, likes_counter: 2)
+      last_posts = [fourth_post, third_post, second_post]
 
-    expect(subject.newest_posts).to eq last_posts
+      expect(subject.newest_posts).to eq last_posts
+    end
   end
-end
 end

@@ -51,15 +51,15 @@ RSpec.describe User, type: :model do
   end
 
   describe '#newest_comments' do
-  it 'should return the last five comments' do
-    second_comment = Comment.create(author: subject.author, post: subject, text: 'second seed comment')
-    third_comment = Comment.create(author: subject.author, post: subject, text: 'third seed comment')
-    fourth_comment = Comment.create(author: subject.author, post: subject, text: 'fourth seed comment')
-    fifth_comment = Comment.create(author: subject.author, post: subject, text: 'fifth seed comment')
-    sixth_comment = Comment.create(author: subject.author, post: subject, text: 'First seed comment')
-    last_comments = [sixth_comment, fifth_comment, fourth_comment, third_comment, second_comment]
+    it 'should return the last five comments' do
+      second_comment = Comment.create(author: subject.author, post: subject, text: 'second seed comment')
+      third_comment = Comment.create(author: subject.author, post: subject, text: 'third seed comment')
+      fourth_comment = Comment.create(author: subject.author, post: subject, text: 'fourth seed comment')
+      fifth_comment = Comment.create(author: subject.author, post: subject, text: 'fifth seed comment')
+      sixth_comment = Comment.create(author: subject.author, post: subject, text: 'First seed comment')
+      last_comments = [sixth_comment, fifth_comment, fourth_comment, third_comment, second_comment]
 
-    expect(subject.newest_comments).to eq last_comments
+      expect(subject.newest_comments).to eq last_comments
+    end
   end
-end
 end

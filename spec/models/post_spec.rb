@@ -28,7 +28,7 @@ RSpec.describe User, type: :model do
   end
 
   it 'title length shoud not exceed 250 chars' do
-    subject.title = 'j'*251
+    subject.title = 'j' * 251
     expect(subject).to_not be_valid
   end
 
@@ -51,7 +51,6 @@ RSpec.describe User, type: :model do
   end
 
   it 'should return the last five comments' do
-    first_comment = Comment.create(author: subject.author, post: subject, text: 'First seed comment')
     second_comment = Comment.create(author: subject.author, post: subject, text: 'second seed comment')
     third_comment = Comment.create(author: subject.author, post: subject, text: 'third seed comment')
     fourth_comment = Comment.create(author: subject.author, post: subject, text: 'fourth seed comment')
@@ -61,5 +60,4 @@ RSpec.describe User, type: :model do
 
     expect(subject.newest_comments).to eq last_comments
   end
-
 end

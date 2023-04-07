@@ -27,7 +27,7 @@ RSpec.describe User, type: :model do
   end
 
   it 'name length shoud not exceed 250 chars' do
-    subject.name = 'j'*251
+    subject.name = 'j' * 251
     expect(subject).to_not be_valid
   end
 
@@ -41,14 +41,15 @@ RSpec.describe User, type: :model do
     expect(subject).to_not be_valid
   end
 
-    it 'should return the last three posts' do
-      first_post = Post.create(author: subject, title: 'First seed post', text: 'Lorem Ipsum is simply dummy text.', comments_counter:2, likes_counter:2)
-      second_post = Post.create(author: subject, title: 'Second seed post', text: 'Lorem Ipsum is simply dummy text.', comments_counter:2, likes_counter:2)
-      third_post = Post.create(author: subject, title: 'Third seed post', text: 'Lorem Ipsum is simply dummy text.', comments_counter:2, likes_counter:2)
-      fourth_post = Post.create(author: subject, title: 'Fourth seed post', text: 'Lorem Ipsum is simply dummy text.', comments_counter:2, likes_counter:2)
-      last_posts = [fourth_post, third_post, second_post]
+  it 'should return the last three posts' do
+    second_post = Post.create(author: subject, title: 'Second seed post', text: 'Lorem Ipsum is simply dummy text.',
+                              comments_counter: 2, likes_counter: 2)
+    third_post = Post.create(author: subject, title: 'Third seed post', text: 'Lorem Ipsum is simply dummy text.',
+                             comments_counter: 2, likes_counter: 2)
+    fourth_post = Post.create(author: subject, title: 'Fourth seed post', text: 'Lorem Ipsum is simply dummy text.',
+                              comments_counter: 2, likes_counter: 2)
+    last_posts = [fourth_post, third_post, second_post]
 
-      expect(subject.newest_posts).to eq last_posts
-    end
-
+    expect(subject.newest_posts).to eq last_posts
+  end
 end

@@ -40,7 +40,7 @@ RSpec.describe User, type: :model do
     subject.posts_counter = 5.09
     expect(subject).to_not be_valid
   end
-
+  describe '#newest_posts' do
   it 'should return the last three posts' do
     second_post = Post.create(author: subject, title: 'Second seed post', text: 'Lorem Ipsum is simply dummy text.',
                               comments_counter: 2, likes_counter: 2)
@@ -52,4 +52,5 @@ RSpec.describe User, type: :model do
 
     expect(subject.newest_posts).to eq last_posts
   end
+end
 end

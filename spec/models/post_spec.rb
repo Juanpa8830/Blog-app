@@ -50,6 +50,7 @@ RSpec.describe User, type: :model do
     expect(subject).to_not be_valid
   end
 
+  describe '#newest_comments' do
   it 'should return the last five comments' do
     second_comment = Comment.create(author: subject.author, post: subject, text: 'second seed comment')
     third_comment = Comment.create(author: subject.author, post: subject, text: 'third seed comment')
@@ -60,4 +61,5 @@ RSpec.describe User, type: :model do
 
     expect(subject.newest_comments).to eq last_comments
   end
+end
 end

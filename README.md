@@ -120,6 +120,18 @@ Feel free to check the [issues page](https://github.com/Juanpa8830/blog-app/issu
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+## © Acknowledge <a name="acknowledge"></a>
+
+- Thanks to my learning partners for all their support.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+## ⭐ Show your support <a name="support"></a>
+
+I really enjoyed doing this project, so, if you like it, I´d appreciate your support giving me a ⭐.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 <!-- LICENSE -->
 
 ## 📝 License <a name="license"></a>

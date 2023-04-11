@@ -2,12 +2,12 @@ require 'rails_helper'
 
 RSpec.describe UsersController, type: :request do
   describe 'Get id' do
-    it 'returns a successful response' do
+    it 'gets a successful response' do
       get users_path
       expect(response).to be_successful
     end
 
-    it 'renders template index' do
+    it 'displays template index' do
       get users_path
       expect(response).to render_template(:index)
     end

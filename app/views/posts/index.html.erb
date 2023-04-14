@@ -1,5 +1,10 @@
 <div id="container">
 <%= render('partials/user_info', user: @user) %>
+<div class="user_container">
+<%= link_to new_user_post_path() do %>
+<button class="add-post">Add New Post</button>
+<% end %>
+</div>
 <div class="posts-container">
   <% @posts.each do |post| %>
     <div class="post-and-comments">

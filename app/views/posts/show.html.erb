@@ -1,1 +1,18 @@
-<h1>Here is the info corresponding to given post</h1>
+<div id="container">
+  <div class="post_info">
+  <div class="post_top">
+    <h4>Post #<%= @post.id %> by <%= @user.name %></h4>
+    <p class='post-counters'>Comments <%= @post.comments_counter %>, Likes <%= @post.likes_counter %></p>
+    </div>
+    <p class='post-text'><%= @post.text %></p>
+    
+  </div>
+  <% if @post.comments.length.positive? %>
+    <div class="comments">
+        <% @post.comments.each do |comment| %>
+          <p><%= comment.author.name %>: <%= comment.text %></p>
+        <% end %>
+    </div>
+  <% end %>
+
+</div>

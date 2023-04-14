@@ -1,1 +1,14 @@
-<h1>Here is the user info corresponding to a given user</h1>
+    
+    <%= render "partials/user_info", user: @user %>
+    <div class="user_details">
+    <p><span>Bio <br><br></span><%= @user.bio %></p>
+    </div>
+  <% @user.newest_posts.each do |post| %>
+    <div class="post">
+      <h4>Post #<%= post.id %></h4>
+      <p><%= post.text %></p>
+    </div>
+  <% end %>
+  <div class="see_all_posts">
+  <button class="b_posts"><%= link_to('See all posts', user_posts_path(@user)) %></button>
+</div>

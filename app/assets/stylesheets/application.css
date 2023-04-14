@@ -96,9 +96,10 @@ ul {
 }
 
 .form-text-area {
-height: 100px;
-width: 40%;
+  height: 100px;
+  width: 40%;
 }
+
 .form-field {
   display: flex;
   flex-direction: column;
@@ -108,14 +109,15 @@ width: 40%;
   width: 40%;
 }
 
-.add-post, .add-like {
+.add-post,
+.add-like {
   font-size: 20px;
-  width:200px;
+  width: 200px;
 }
 
 .comment-like {
   display: flex;
-  gap:10%;
-  margin:2%;
+  gap: 10%;
+  margin: 2%;
   justify-content: center;
 }

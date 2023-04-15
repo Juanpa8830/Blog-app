@@ -5,8 +5,8 @@
     <p class='post-counters'>Comments <%= @post.comments_counter %>, Likes <%= @post.likes_counter %></p>
     </div>
     <p class='post-text'><%= @post.text %></p>
-    
   </div>
+  
   <% if @post.comments.length.positive? %>
     <div class="comments">
         <% @post.comments.each do |comment| %>
@@ -14,5 +14,16 @@
         <% end %>
     </div>
   <% end %>
+
+<div class="comment-like">
+<%= link_to new_user_post_comment_path(@user, @post) do %>
+<button class="add-post">Add New Comment</button>
+<% end %>
+
+<%= form_with model: Like.new, url: user_post_likes_path(@user, @post) do |form| %>
+  <% form.submit "Add Like", class: "add-like" %>
+<% end %>
+ 
+  </div>
 
 </div>

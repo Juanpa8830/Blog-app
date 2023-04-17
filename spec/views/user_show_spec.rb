@@ -13,7 +13,7 @@ RSpec.describe 'User show page - ', type: :feature do
     @post3 = Post.create(author: @user1, title: 'post 3', text: 'new post 3', comments_counter: 0, likes_counter: 0)
     @post4 = Post.create(author: @user1, title: 'post 4', text: 'new post 4', comments_counter: 0, likes_counter: 0)
     @post5 = Post.create(author: @user1, title: 'post 5', text: 'new post 5', comments_counter: 0, likes_counter: 0)
-    @comment1 = Comment.create(author @user1, pos: @post1, text: 'my comments')
+    @comment1 = Comment.create(author: @user1, post: @post1, text: 'my comment')
     visit user_path(@user1)
   end
 
@@ -25,7 +25,7 @@ RSpec.describe 'User show page - ', type: :feature do
     expect(page).to have_content(@user1.name)
   end
 
-  it 'I can see the user\'s first 3 posts.' do
+  it 'I can see the user\'s last 3 posts.' do
     expect(page).to have_content(@post3.text)
     expect(page).to have_content(@post4.text)
     expect(page).to have_content(@post5.text)

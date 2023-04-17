@@ -47,8 +47,14 @@ RSpec.describe 'post_index', type: :feature do
   end
 
   it 'I can see how many comments a post has' do
-    @user1.posts.each do |_post|
+    @user1.posts.each do |post|
       expect(page).to have_content('Number of posts: 5')
+    end
+  end
+
+  it 'I can see how many likes a post has' do
+    @user1.posts.each do |post|
+      expect(page).to have_content(post.likes_counter)
     end
   end
 

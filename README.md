@@ -86,6 +86,18 @@ To run the project, execute the following command:
 
 rails server
 
+### Run tests
+
+To run tests, run the following command:
+
+Install gems
+```ruby
+  bundle install
+```
+Run tests
+```ruby
+  rspec spec
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- AUTHORS -->
@@ -97,7 +109,11 @@ rails server
 - GitHub: [@juanpa8830](https://github.com/Juanpa8830)
 - LinkedIn: [Juan Pablo Guerrero](https://www.linkedin.com/in/juanpabloguerrerorios/)
 
+👤 **Davian Beroni**
 
+- GitHub: [dadadon](https://github.com/dadadon)
+- Twitter: [Davian Beroni](https://twitter.com/davianberoni)
+- LinkedIn: [Davian Beroni](https://www.linkedin.com/in/davian-beroni/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

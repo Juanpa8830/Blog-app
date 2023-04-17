@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe UsersController, type: :request do
-
   before(:each) do
     @user1 = User.create(
       name: 'User 1',

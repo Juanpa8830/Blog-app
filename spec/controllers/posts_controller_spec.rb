@@ -14,7 +14,7 @@ RSpec.describe PostsController, type: :request do
       title: 'post 1',
       text: 'this is post 1 text',
       comments_counter: 0,
-      likes_counter:0
+      likes_counter: 0
     )
 
     @post2 = Post.create(
@@ -22,13 +22,12 @@ RSpec.describe PostsController, type: :request do
       title: 'post 2',
       text: 'this is post 2 text',
       comments_counter: 0,
-      likes_counter:0
+      likes_counter: 0
     )
   end
 
   describe 'Get / index' do
     it 'obtainss a successful response' do
-
       get user_posts_path(@user1.id)
       expect(response).to be_successful
     end
@@ -45,7 +44,7 @@ RSpec.describe PostsController, type: :request do
 
     it ' the response includes correct text' do
       get user_posts_path(@user1)
-      expect(response.body).to include("Number of posts: 2")
+      expect(response.body).to include('Number of posts: 2')
     end
   end
 end

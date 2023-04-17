@@ -47,12 +47,12 @@ RSpec.describe 'post_index', type: :feature do
   end
 
   it 'I can see how many comments a post has' do
-    @user1.posts.each do |post|
+    @user1.posts.each do |_post|
       expect(page).to have_content('Number of posts: 5')
     end
   end
 
-   it 'I can see a section for pagination if there are more posts than fit on the view.' do
+  it 'I can see a section for pagination if there are more posts than fit on the view.' do
     expect(page).to have_content('Pagination')
   end
 

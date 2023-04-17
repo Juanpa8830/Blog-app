@@ -1,5 +1,6 @@
 require 'rails_helper'
 
+
 RSpec.describe 'User show page - ', type: :feature do
   before :each do
     @user1 = User.create(

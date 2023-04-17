@@ -1,6 +1,5 @@
 require 'rails_helper'
 
-
 RSpec.describe 'User show page - ', type: :feature do
   before :each do
     @user1 = User.create(
@@ -43,7 +42,6 @@ RSpec.describe 'User show page - ', type: :feature do
   it 'I can see a button that lets me view all of a user\'s posts.' do
     expect(page).to have_content('See all posts')
   end
-
 
   it "When I click to see all posts, it redirects me to the user's post's index page." do
     click_link 'See all posts'

@@ -23,7 +23,6 @@ class PostsController < ApplicationController
       if @post.save
         format.html { redirect_to user_posts_path(current_user) }
       else
-        puts 'hello'
         format.html { render :new }
       end
     end

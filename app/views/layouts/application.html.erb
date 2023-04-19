@@ -1,16 +1,28 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Project</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_importmap_tags %>
-  </head>
+<html xmlns = "http://www.w3.org/1999/xhtml">
 
-  <body>
-    <%= yield %>
-  </body>
+   <head>
+      <meta http-equiv = "Content-Type" content = "text/html; charset = iso-8859-1" />
+      <meta http-equiv = "Content-Language" content = "en-us" />
+      <title>Blog App</title>
+      <%= stylesheet_link_tag "application" %>
+   </head>
+
+   <body>
+
+        <div id = "container">
+         
+      
+         <div id = "content">
+          <%= yield -%>
+         </div>
+
+           
+      </div>
+      <p class="notice"><%=notice%> </p>
+      <p class="alert"><%=alert%> </p> 
+      
+   </body>
+   
 </html>

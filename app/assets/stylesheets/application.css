@@ -123,20 +123,22 @@ ul {
 }
 
 .int-container {
-  display:flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 1%;
-  width:90%;
+  width: 90%;
 }
 
-#user_email, #user_password,
-#user_name, #user_password_confirmation {
+#user_email,
+#user_password,
+#user_name,
+#user_password_confirmation {
   width: 500px;
 }
 
 .actions {
-  display:flex;
+  display: flex;
   justify-content: center;
 }

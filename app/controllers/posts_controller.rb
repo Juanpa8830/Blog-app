@@ -13,6 +13,13 @@ class PostsController < ApplicationController
     @post = Post.new
   end
 
+  def destroy
+    @post = Post.find(params[:id]).destroy
+    respond_to do |format|
+      format.html { redirect_to user_posts_path(current_user), notice: 'Post destroyed successfully' }
+    end
+  end
+
   def create
     @post = current_user.posts.new(post_params)
     @post.author_id = current_user.id

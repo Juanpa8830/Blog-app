@@ -10,6 +10,8 @@ ruby '3.1.3'
 gem 'rails', '~> 7.0.4', '>= 7.0.4.3'
 # Use devise gem as the session and account manager for the aplication
 gem 'devise'
+# Use cancancan for authorization process
+gem 'cancancan'
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]a
 gem 'sprockets-rails'
 

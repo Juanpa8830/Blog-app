@@ -11,10 +11,17 @@ class CommentsController < ApplicationController
     @comment.post = @user.posts.find(params['post_id'])
     respond_to do |format|
       if @comment.save
-        format.html { redirect_to user_post_path(@user, @post) }
+        format.html { redirect_to user_posts_path(@user) }
       else
         format.html { render :new }
       end
+    end
+  end
+
+  def destroy
+    @comment = Comment.find(params[:id]).destroy
+    respond_to do |format|
+      format.html { redirect_to user_posts_path(current_user), notice: 'Comment destroyed successfully' }
     end
   end
 

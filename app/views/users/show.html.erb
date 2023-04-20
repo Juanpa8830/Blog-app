@@ -1,5 +1,8 @@
     
     <%= render "partials/user_info", user: @user %>
+    <%= link_to root_path do %>
+      <button class="b-home">Home</button>
+      <% end %>
     <div class="user_details">
     <p><span>Bio <br><br></span><%= @user.bio %></p>
     </div>

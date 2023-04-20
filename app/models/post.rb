@@ -8,6 +8,7 @@ class Post < ApplicationRecord
   validates :likes_counter, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
 
   after_save :update_post_counter
+  after_destroy :update_post_counter
 
   def newest_comments
     comments.order(created_at: :desc).limit(5)

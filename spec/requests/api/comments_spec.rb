@@ -1,12 +1,11 @@
 require 'swagger_helper'
 
 RSpec.describe 'api/comments', type: :request do
-
   path '/api/users/{user_id}/posts/{post_id}/comments' do
     # You'll want to customize the parameter types...
     parameter name: 'user_id', in: :path, type: :string, description: 'user_id'
     parameter name: 'post_id', in: :path, type: :string, description: 'post_id'
- 
+
 
     get('list comments') do
       response(200, 'successful') do
@@ -28,7 +27,7 @@ RSpec.describe 'api/comments', type: :request do
       response(200, 'successful') do
         let(:user_id) { '123' }
         let(:post_id) { '123' }
-        let(:text) {'hello'}
+        let(:text) { 'hello' }
         after do |example|
           example.metadata[:response][:content] = {
             'application/json' => {

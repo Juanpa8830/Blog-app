@@ -10,6 +10,15 @@ Rails.application.routes.draw do
       resources :comments, :likes
     end
   end
+
+  # add routes for api endpoints
+  namespace :api do
+    resources :users do
+      resources :posts do
+        resources :comments
+    end
+  end
+end
 end
 
   
